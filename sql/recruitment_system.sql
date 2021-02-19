@@ -180,11 +180,16 @@ ALTER TABLE `company`
 ALTER TABLE `job_post`
   MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT;
 
+<<<<<<< HEAD
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+=======
+INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `email`, `password`, `address`, `city`, `state`, `contactno`, `qualification`, `stream`, `passingyear`, `dob`, `age`, `designation`, `resume`) VALUES
+(1, 'Krish', 'Patra', 'krish@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'WIYw', 'Kolkata', 'WB', '7865674321', 'MCA', 'Computer Science', '2021-06-15', '1994-11-16', '21', 'Student', '5ad628c5407ce.docx');
+>>>>>>> 7ee2f9814380f6c49c825d4a90f9840c54701c6b
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
