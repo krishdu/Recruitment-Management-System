@@ -161,13 +161,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `email`, `password`, `address`, `city`, `state`, `contactno`, `qualification`, `stream`, `passingyear`, `dob`, `age`, `designation`, `resume`) VALUES
-(1, 'Rahul', 'Panchal', 'rahulnpanchal50@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Bhayandar(East)', 'Mumbai', 'Maharashtra', '8879096228', 'MCA', 'Computer Science', '2017-05-15', '1996-10-13', '21', 'Student', '5ad628c5407ce.docx'),
-(2, 'Shubham', 'Upadhyay', 'shubhamupadhyay109@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Nallasopara(West)', 'Mumbai', 'Maharashtra', '7021275658', 'MCA', 'Computer Science', '2017-06-13', '1996-05-15', '22', 'Student', '5ad62932b4b3d.docx'),
-(3, 'Bhavin', 'Panchal', 'bhavin@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Bhayandar(East)', 'Mumbai', 'Maharashtra', '8655225165', 'B.Com', 'Commerce', '2016-06-15', '1996-06-04', '22', 'Student', '5ad62aa058c3b.docx'),
-(4, 'Rishab', 'Sharma', 'rishab@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Bhayandar(East)', 'Mumbai', 'Maharashtra', '8097239484', 'B.Com', 'Commerce', '2017-07-12', '1996-07-24', '21', 'Student', '5ad62b16c53a1.docx'),
-(5, 'Prince', 'Vishwakarma', 'prince@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Bhayandar(East)', 'Mumbai', 'Maharashtra', '9702019404', 'BSc.IT', 'Science', '2017-06-06', '1996-02-05', '22', 'Student', '5ad62be094863.docx'),
-(6, 'Jash', 'Kansara', 'jash@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Borivali(West)', 'Mumbai', 'Maharashtra', '8845457412', 'BSc.IT', 'Science', '2017-05-30', '1996-12-13', '21', 'Student', '5ad62c9a45ad5.docx'),
-(7, 'Nitin', 'Patel', 'nitin@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'Bhayandar(East)', 'Mumbai', 'Maharashtra', '9702818665', 'BSc.IT', 'Science', '2017-02-10', '1996-08-23', '21', 'Student', '5ad62d070a91d.docx');
+(1, 'Krish', 'Patra', 'krish@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'WIYw', 'Kolkata', 'WB', '7865674321', 'MCA', 'Computer Science', '2021-06-15', '1994-11-16', '21', 'Student', '5ad628c5407ce.docx');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
