@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 19, 2021 at 04:53 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.23
+-- Generation Time: Feb 19, 2021 at 09:37 AM
+-- Server version: 5.6.43
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id6257096_online_admission_system_app`
+-- Database: `recruitment_db2`
 --
 
 -- --------------------------------------------------------
@@ -52,8 +52,15 @@ CREATE TABLE `apply_job_post` (
   `id_jobpost` int(11) NOT NULL,
   `id_company` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 0
+  `status` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `apply_job_post`
+--
+
+INSERT INTO `apply_job_post` (`id_apply`, `id_jobpost`, `id_company`, `id_user`, `status`) VALUES
+(1, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -70,8 +77,15 @@ CREATE TABLE `company` (
   `companytype` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
+  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`id_company`, `companyname`, `headofficecity`, `contactno`, `website`, `companytype`, `email`, `password`, `createdAt`) VALUES
+(1, 'KRISH PVT. LTD.', 'Kolkata', '6754634325', 'https://krishnendupatra.cf', 'IT', 'krish@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '2021-02-19 17:08:14');
 
 -- --------------------------------------------------------
 
@@ -88,8 +102,15 @@ CREATE TABLE `job_post` (
   `maximumsalary` varchar(255) NOT NULL,
   `experience` varchar(255) NOT NULL,
   `qualification` varchar(255) NOT NULL,
-  `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
+  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `job_post`
+--
+
+INSERT INTO `job_post` (`id_jobpost`, `id_company`, `jobtitle`, `description`, `minimumsalary`, `maximumsalary`, `experience`, `qualification`, `createdAt`) VALUES
+(1, 1, 'WEB DEVELOPMENT', 'Required basic knowlwdge of PHP', '35000', '50000', '1', 'B.TECH', '2021-02-19 17:36:36');
 
 -- --------------------------------------------------------
 
@@ -103,7 +124,7 @@ CREATE TABLE `users` (
   `lastname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `address` text DEFAULT NULL,
+  `address` text,
   `city` varchar(255) DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
   `contactno` varchar(255) DEFAULT NULL,
@@ -115,6 +136,13 @@ CREATE TABLE `users` (
   `designation` varchar(255) DEFAULT NULL,
   `resume` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `email`, `password`, `address`, `city`, `state`, `contactno`, `qualification`, `stream`, `passingyear`, `dob`, `age`, `designation`, `resume`) VALUES
+(1, 'Krishnendu', 'Patra', 'krishdu@gmail.com', 'ZTM4OGYwMmY3NTBlNjVlYmJhOTVhYjk0OTNjZGEwMWU=', '32/1 SECTOR-v, saltlake', 'Kolkata', 'West Bengal (WB)', '6754342134', 'B.TECH', 'Information Technology', '2021-02-18', '1994-06-13', '76', 'DIRECTOR', '602ff1754e51b.pdf');
 
 --
 -- Indexes for dumped tables
@@ -166,30 +194,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `apply_job_post`
 --
 ALTER TABLE `apply_job_post`
-  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_apply` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id_company` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_company` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `job_post`
 --
 ALTER TABLE `job_post`
-  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_jobpost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
-<<<<<<< HEAD
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
-=======
-INSERT INTO `users` (`id_user`, `firstname`, `lastname`, `email`, `password`, `address`, `city`, `state`, `contactno`, `qualification`, `stream`, `passingyear`, `dob`, `age`, `designation`, `resume`) VALUES
-(1, 'Krish', 'Patra', 'krish@gmail.com', 'YjdlNDhmMTk4NjFhNDNjNGM2MDdhOGFlZTBiY2M3Mjg=', 'WIYw', 'Kolkata', 'WB', '7865674321', 'MCA', 'Computer Science', '2021-06-15', '1994-11-16', '21', 'Student', '5ad628c5407ce.docx');
->>>>>>> 7ee2f9814380f6c49c825d4a90f9840c54701c6b
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
